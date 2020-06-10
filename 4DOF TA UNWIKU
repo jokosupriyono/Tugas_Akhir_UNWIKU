@@ -26,13 +26,13 @@ servo2 = Servo(19, min_pulse_width=1/1000, max_pulse_width=2/1000) #min 0 dan ma
 servo3 = Servo(20, min_pulse_width=1/1000, max_pulse_width=2/1000) #min 0 dan max 90
 servo4 = Servo(26, min_pulse_width=1/1000, max_pulse_width=2/1000) #min 0 dan max 90
 
-servo.source = scaled(pot1.values, -1, 1) #skala servo
-servo.source = scaled(pot2.values, -1, 1) #skala servo
-servo.source = scaled(pot3.values, -1, 1) #skala servo
-servo.source = scaled(pot4.values, -1, 1) #skala servo
+servo.source = scaled(pot1.values, -1, 1) #skala potentiometer
+servo.source = scaled(pot2.values, -1, 1) #skala potentiometer
+servo.source = scaled(pot3.values, -1, 1) #skala potentiometer
+servo.source = scaled(pot4.values, -1, 1) #skala potentiometer
 
 while True:
     print("Pot1:{:.2f} Pot2:{:.2f} Pot3:{:.2f} Pot4:{:.2f}".format(pot1.value,pot2.value,pot3.value,pot4.value))
-    sleep(1.0) 
+    sleep(1.0) #print pulse potentiometer
 
 pause() # let the script run until Ctrl+C
